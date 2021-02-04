@@ -1,8 +1,14 @@
 package intec.joachim.flight.data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Reservation {
 
     //variables
+    @Id
+    private int id;
     private int numberOfBags;
     private boolean checkedInAlready;
     private Passenger passenger;

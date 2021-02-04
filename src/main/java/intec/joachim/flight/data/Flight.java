@@ -1,11 +1,16 @@
 package intec.joachim.flight.data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.sql.Timestamp;
 import java.util.Date;
 
+@Entity
 public class Flight {
 
     //variables
+    @Id
+    private int id;
     private String flightNumber;
     private String airline;
     private String cityDeparture;

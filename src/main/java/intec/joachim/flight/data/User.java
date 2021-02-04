@@ -1,8 +1,14 @@
 package intec.joachim.flight.data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
     //variables
+    @Id
+    private int id;
     private String firstName;
     private String lastName;
     private String email;

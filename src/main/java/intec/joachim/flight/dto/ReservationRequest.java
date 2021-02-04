@@ -1,25 +1,21 @@
-package intec.joachim.flight.data;
+package intec.joachim.flight.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+//DTO, which stands for Data Transfer Object, is a design pattern conceived to reduce the number of calls when working with remote interfaces.
 
-@Entity
 public class ReservationRequest {
 
-    //variables
-    @Id
-    private int id;
-    public Long flightId;
-    public String passengerFirstName;
-    public String passengerLastName;
-    public String passengerEmail;
-    public String passengerPhone;
-    public String nameOnCard;
-    public String cardNumber;
-    public String expirationDate;
-    public String securityCode;
+    private Long flightId;
+    private String passengerFirstName;
+    private String passengerMiddleName;
+    private String passengerLastName;
+    private String passengerEmail;
+    private String passengerPhone;
+    private String nameOnTheCard;
+    private String cardNumber;
 
-    //getters & setters
+    private String expirationDate;
+    private String securityCode;
+
     public Long getFlightId() {
         return flightId;
     }
@@ -34,6 +30,14 @@ public class ReservationRequest {
 
     public void setPassengerFirstName(String passengerFirstName) {
         this.passengerFirstName = passengerFirstName;
+    }
+
+    public String getPassengerMiddleName() {
+        return passengerMiddleName;
+    }
+
+    public void setPassengerMiddleName(String passengerMiddleName) {
+        this.passengerMiddleName = passengerMiddleName;
     }
 
     public String getPassengerLastName() {
@@ -60,12 +64,12 @@ public class ReservationRequest {
         this.passengerPhone = passengerPhone;
     }
 
-    public String getNameOnCard() {
-        return nameOnCard;
+    public String getNameOnTheCard() {
+        return nameOnTheCard;
     }
 
-    public void setNameOnCard(String nameOnCard) {
-        this.nameOnCard = nameOnCard;
+    public void setNameOnTheCard(String nameOnTheCard) {
+        this.nameOnTheCard = nameOnTheCard;
     }
 
     public String getCardNumber() {
@@ -92,16 +96,15 @@ public class ReservationRequest {
         this.securityCode = securityCode;
     }
 
-    //method used for output on screen
     @Override
     public String toString() {
         return "ReservationRequest{" +
                 "flightId=" + flightId +
                 ", passengerFirstName='" + passengerFirstName + '\'' +
-                ", passengerLastName='" + passengerLastName + '\'' +
+                ", passengerMiddleName='" + passengerMiddleName + '\'' +
                 ", passengerEmail='" + passengerEmail + '\'' +
                 ", passengerPhone='" + passengerPhone + '\'' +
-                ", nameOnCard='" + nameOnCard + '\'' +
+                ", nameOnTheCard='" + nameOnTheCard + '\'' +
                 ", cardNumber='" + cardNumber + '\'' +
                 ", expirationDate='" + expirationDate + '\'' +
                 ", securityCode='" + securityCode + '\'' +
